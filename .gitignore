@@ -1,0 +1,12 @@
+
+__pycache__/
+*.pyc
+env/
+logs/
+db.sqlite3
+migrations/
+static/
+*.csv
+data/
+.vscode/
+*.ipynb
