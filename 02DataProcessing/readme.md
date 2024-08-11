@@ -43,7 +43,7 @@ Dask and Apache Spark are both excellent choices for distributed processing. Das
      pip install -r requirements.txt
      ```
 5. **Dask**:
-   - The [Dask website](https://docs.dask.org/en/stable/) for refrence.
+   - The [Dask website](https://docs.dask.org/en/stable/) for reference.
 
 
 ### Python file indexing folder structure
