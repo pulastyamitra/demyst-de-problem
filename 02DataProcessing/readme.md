@@ -12,15 +12,16 @@
 - Demonstrate that the same can work on bigger dataset
 - Hint - You would need some distributed computing platform
 
-## Fixed-Width Parser
+## Data Anonymization
 
-This process involves reading the specifications that dictate the structure of the fixed-width file, such as column widths and encodings. The Python application then meticulously processes the input file, extracting the data according to these predefined rules and converting it into the more universally recognized and easily manipulable CSV format.
+Dask and Apache Spark are both excellent choices for distributed processing. Dask is known for its ability to handle complex, irregular data workflows and integrates well with existing Python ecosystems. On the other hand, Apache Spark is renowned for its speed and support for a wide range of programming languages. I have used Dask to process the file in parallel. The auto scale is configured based on client machine, which can optimize resource usage and cost efficiency. Both tools have their unique strengths and can be selected based on specific project requirements and infrastructure.
 
 ## Requirements
 
 - Python 3.9+
 - Docker (optional, for containerized execution)
 - Docker Desktop with WSL2 (for Windows users)
+- Dask (for distributed computing)
 
 ## Setup
 
@@ -36,18 +37,23 @@ This process involves reading the specifications that dictate the structure of t
 3. **Ensure Docker Desktop is Running**:
    - Start Docker Desktop and ensure it is running properly.
 
+4. **pip install the requirements.txt**:
+   - Run the following command to install the required Python packages:
+     ```bash
+     pip install -r requirements.txt
+     ```
+5. **Dask**:
+   - The [Dask website](https://docs.dask.org/en/stable/) for refrence.
+
 
 ### Python file indexing folder structure
 
 ```bash
-├── 01FileParser
+├── 02DataProcessing
 │   ├── src
 │   │   ├── main.py
 │   ├── util
-│   │   ├── file_parser.py
-│   │   ├── file_spec.py
-│   │   ├── generate.py
+│   │   ├── data_anonymiser.py
+│   │   ├── generate_sample_data.py
 │   ├── test
-│   │   ├── spec.json
-│   │   ├── test_file_parser.py
-│   │   ├── test_generate_sample_file.py
+│   │   ├── test_data_anonymiser.py
